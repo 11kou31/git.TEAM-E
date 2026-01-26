@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIME TABLE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/timetable.css" />
+  </head>
+  <body>
+    <header class="site-header">ヘッダー</header>
+
+    <main class="container">
+      <h1 class="page-title">TIME TABLE</h1>
+
+      <div class="date-tabs">
+        <button class="tab-btn active" data-target="day1">5/2</button>
+        <button class="tab-btn" data-target="day2">5/3</button>
+      </div>
+
+      <div class="separator"></div>
+
+      <div id="day1" class="timetable active">
+        <div class="col-head time-col"></div>
+        <div class="col-head main-stage">MAIN stage</div>
+        <div class="col-head sub-stage">SUB stage</div>
+
+        <div class="time-label t-1100">11:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1200">12:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1300">13:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1400">14:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1500">15:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1600">16:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1700">17:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1800">18:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1900">19:00 <span class="arrow">▶</span></div>
+
+        <div class="grid-line l-1100"></div>
+        <div class="grid-line l-1200"></div>
+        <div class="grid-line l-1300"></div>
+        <div class="grid-line l-1400"></div>
+        <div class="grid-line l-1500"></div>
+        <div class="grid-line l-1600"></div>
+        <div class="grid-line l-1700"></div>
+        <div class="grid-line l-1800"></div>
+        <div class="event-card main" style="grid-row: time-1100 / span 4">
+          <div class="time-box">11:00<br />-11:40</div>
+          <div class="content-box">
+            <div class="artist-name">The Blossom Drive</div>
+            <img class="artist-img" src="img/TheBlossomDrive.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div class="event-card main" style="grid-row: time-1200 / span 4">
+          <div class="time-box">12:00<br />-12:40</div>
+          <div class="content-box">
+            <div class="artist-name">高橋リオ</div>
+            <img class="artist-img" src="img/Takahashi.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div class="event-card main" style="grid-row: time-1400 / span 4">
+          <div class="time-box">14:00<br />-14:40</div>
+          <div class="content-box">
+            <div class="artist-name">DJ Breeze</div>
+            <img class="artist-img" src="img/DJ_Breeze.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div class="event-card main" style="grid-row: time-1500 / span 4">
+          <div class="time-box">15:00<br />-15:40</div>
+          <div class="content-box">
+            <div class="artist-name">中村蓮</div>
+            <img class="artist-img" src="img/Nakamura.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div class="event-card main" style="grid-row: time-1700 / span 12">
+          <div class="time-box">17:00<br />-19:00</div>
+          <div class="content-box large-content">
+            <div class="artist-name">The Blossom Drive<br/>
+              <span style="font-size: 0.8em">-スペシャルライブ-</span>
+            </div>
+            <img class="artist-img large" src="img/TheBlossomDrive.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div class="event-card sub" style="grid-row: time-1200 / span 4; grid-column: 3">
+          <div class="time-box">12:00<br />-12:40</div>
+          <div class="content-box">
+            <div class="artist-name">Morning Echoes</div>
+            <img class="artist-img" src="img/MorningEchoes.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div class="event-card sub" style="grid-row: time-1300 / span 4; grid-column: 3">
+          <div class="time-box">13:00<br />-13:40</div>
+          <div class="content-box">
+            <div class="artist-name">Velvet Groove</div>
+            <img class="artist-img" src="img/VelvetGroove.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div class="event-card sub" style="grid-row: time-1500 / span 4; grid-column: 3">
+          <div class="time-box">15:00<br />-15:40</div>
+          <div class="content-box">
+            <div class="artist-name">Morning Echoes</div>
+            <img class="artist-img" src="img/MorningEchoes.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div class="event-card sub" style="grid-row: time-1600 / span 4; grid-column: 3">
+          <div class="time-box">16:00<br />-16:40</div>
+          <div class="content-box">
+            <div class="artist-name">Velvet Groove</div>
+            <img class="artist-img" src="img/VelvetGroove.webp" alt="アーティスト">
+          </div>
+        </div>
+      </div>
+
+      <div id="day2" class="timetable">
+        <div class="col-head time-col"></div>
+        <div class="col-head main-stage">MAIN stage</div>
+        <div class="col-head sub-stage">SUB stage</div>
+
+        <div class="time-label t-1100">11:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1200">12:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1300">13:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1400">14:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1500">15:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1600">16:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1700">17:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1800">18:00 <span class="arrow">▶</span></div>
+        <div class="time-label t-1900">19:00 <span class="arrow">▶</span></div>
+
+        <div class="grid-line l-1100"></div>
+        <div class="grid-line l-1200"></div>
+        <div class="grid-line l-1300"></div>
+        <div class="grid-line l-1400"></div>
+        <div class="grid-line l-1500"></div>
+        <div class="grid-line l-1600"></div>
+        <div class="grid-line l-1700"></div>
+        <div class="grid-line l-1800"></div>
+
+        <div class="event-card main" style="grid-row: time-1100 / span 4">
+          <div class="time-box">11:00<br />-11:40</div>
+          <div class="content-box">
+            <div class="artist-name">Crimson Waves</div>
+            <img class="artist-img" src="img/CrimsonWaves.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div class="event-card main" style="grid-row: time-1200 / span 4">
+          <div class="time-box">12:00<br />-12:40</div>
+          <div class="content-box">
+            <div class="artist-name">宮本サクラ</div>
+            <img class="artist-img" src="img/Miyamoto.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div class="event-card main" style="grid-row: time-1400 / span 4">
+          <div class="time-box">14:00<br />-14:40</div>
+          <div class="content-box">
+            <div class="artist-name">森下晴人</div>
+            <img class="artist-img" src="img/Morisita.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div class="event-card main" style="grid-row: time-1500 / span 4">
+          <div class="time-box">15:00<br />-15:40</div>
+          <div class="content-box">
+            <div class="artist-name">宮本サクラ</div>
+            <img class="artist-img" src="img/Miyamoto.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div class="event-card main" style="grid-row: time-1700 / span 12">
+          <div class="time-box">17:00<br />-19:00</div>
+          <div class="content-box large-content">
+            <div class="artist-name">Horizon Strings<br />
+              <span style="font-size: 0.8em">-フィナーレ-</span>
+            </div>
+            <img class="artist-img large" src="img/HorizonStrings.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div
+          class="event-card sub"
+          style="grid-row: time-1200 / span 4; grid-column: 3"
+        >
+          <div class="time-box">12:00<br />-12:40</div>
+          <div class="content-box">
+            <div class="artist-name">風雅(ふうが)</div>
+            <img class="artist-img" src="img/Huuga.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div
+          class="event-card sub"
+          style="grid-row: time-1300 / span 4; grid-column: 3"
+        >
+          <div class="time-box">13:00<br />-13:40</div>
+          <div class="content-box">
+            <div class="artist-name">Neon Lights</div>
+            <img class="artist-img" src="img/NeonLights.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div
+          class="event-card sub"
+          style="grid-row: time-1500 / span 4; grid-column: 3"
+        >
+          <div class="time-box">15:00<br />-15:40</div>
+          <div class="content-box">
+            <div class="artist-name">風雅(ふうが)</div>
+            <img class="artist-img" src="img/Huuga.webp" alt="アーティスト">
+          </div>
+        </div>
+
+        <div
+          class="event-card sub"
+          style="grid-row: time-1600 / span 4; grid-column: 3"
+        >
+          <div class="time-box">16:00<br />-16:40</div>
+          <div class="content-box">
+            <div class="artist-name">Neon Lights</div>
+            <img class="artist-img" src="img/NeonLights.webp" alt="アーティスト">
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">footer</div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".tab-btn");
+        const timetables = document.querySelectorAll(".timetable");
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            // すべてのタブからactiveクラスを削除
+            tabs.forEach((t) => t.classList.remove("active"));
+            // クリックされたタブにactiveクラスを追加
+            tab.classList.add("active");
+
+            // ターゲットIDを取得
+            const targetId = tab.getAttribute("data-target");
+
+            // すべてのタイムテーブルを非表示
+            timetables.forEach((tt) => tt.classList.remove("active"));
+            // ターゲットのタイムテーブルを表示
+            document.getElementById(targetId).classList.add("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
