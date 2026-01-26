@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>お問い合わせ</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
         body {
             background-color: #fff;
@@ -13,7 +15,7 @@
         }
 
         .form-container {
-            max-width: 500px;
+            max-width: 520px;
             margin: 0 auto;
         }
 
@@ -21,7 +23,7 @@
             background-color: #fc4d4d;
             border-color: #fc4d4d;
             color: white;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
         }
 
         .btn-custom-red:hover {
@@ -35,40 +37,83 @@
             border-radius: 0;
             border-color: #666;
         }
+
+        .required {
+            color: #e60000;
+            font-size: 0.85rem;
+            margin-left: 4px;
+        }
     </style>
 </head>
 
 <body>
+
     <div class="container form-container">
         <h2 class="text-center mb-5">お問い合わせ</h2>
 
-        <!-- ★ここを修正 -->
         <form action="contact-confirm.html" method="get">
 
+            <!-- 問い合わせ種別 -->
             <div class="row mb-4 align-items-center">
-                <label for="name" class="col-sm-4 col-form-label">名前</label>
+                <label class="col-sm-4 col-form-label">
+                    問い合わせ種別 <span class="required">必須</span>
+                </label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="name" name="name">
+                    <select class="form-select" name="type" required>
+                        <option value="">選択してください</option>
+                        <option value="チケットについて">チケットについて</option>
+                        <option value="会場について">会場について</option>
+                        <option value="出演者について">出演者について</option>
+                        <option value="その他">その他</option>
+                    </select>
                 </div>
             </div>
 
+            <!-- 名前 -->
             <div class="row mb-4 align-items-center">
-                <label for="email" class="col-sm-4 col-form-label">メールアドレス</label>
+                <label for="name" class="col-sm-4 col-form-label">
+                    お名前 <span class="required">必須</span>
+                </label>
                 <div class="col-sm-8">
-                    <input type="email" class="form-control" id="email" name="email">
+                    <input type="text" class="form-control" id="name" name="name" required>
                 </div>
             </div>
 
+            <!-- メール -->
+            <div class="row mb-4 align-items-center">
+                <label for="email" class="col-sm-4 col-form-label">
+                    メールアドレス <span class="required">必須</span>
+                </label>
+                <div class="col-sm-8">
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+            </div>
+
+            <!-- 電話番号 -->
+            <div class="row mb-4 align-items-center">
+                <label for="tel" class="col-sm-4 col-form-label">
+                    電話番号
+                </label>
+                <div class="col-sm-8">
+                    <input type="tel" class="form-control" id="tel" name="tel" placeholder="例）090-1234-5678">
+                </div>
+            </div>
+
+            <!-- お問い合わせ内容 -->
             <div class="mb-5">
-                <label for="message" class="form-label">お問い合わせ内容</label>
-                <textarea class="form-control" id="message" name="message" rows="6"></textarea>
+                <label for="message" class="form-label">
+                    お問い合わせ内容 <span class="required">必須</span>
+                </label>
+                <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
             </div>
 
+            <!-- ボタン -->
             <div class="text-center mb-5">
                 <button type="submit" class="btn btn-custom-red rounded-pill px-5 py-2">
-                    確認
+                    確認画面へ
                 </button>
             </div>
+
         </form>
     </div>
 

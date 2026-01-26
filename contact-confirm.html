@@ -89,9 +89,11 @@
 
     <form action="contact-thanks.html" method="get">
 
-        <!-- hidden（完了画面に送る用） -->
+        <!-- hidden（thanksへ送る用） -->
+        <input type="hidden" name="type" id="hidden-type">
         <input type="hidden" name="name" id="hidden-name">
         <input type="hidden" name="email" id="hidden-email">
+        <input type="hidden" name="tel" id="hidden-tel">
         <input type="hidden" name="message" id="hidden-message">
 
         <div class="page-wrap text-center">
@@ -109,6 +111,11 @@
             <div class="confirm-card text-start mb-4">
 
                 <div class="confirm-item">
+                    <div class="confirm-label">問い合わせ種別</div>
+                    <div class="confirm-value" id="confirm-type"></div>
+                </div>
+
+                <div class="confirm-item">
                     <div class="confirm-label">お名前</div>
                     <div class="confirm-value" id="confirm-name"></div>
                 </div>
@@ -116,6 +123,11 @@
                 <div class="confirm-item">
                     <div class="confirm-label">メールアドレス</div>
                     <div class="confirm-value" id="confirm-email"></div>
+                </div>
+
+                <div class="confirm-item">
+                    <div class="confirm-label">電話番号</div>
+                    <div class="confirm-value" id="confirm-tel"></div>
                 </div>
 
                 <div class="confirm-item mb-0">
@@ -131,22 +143,27 @@
             </div>
 
         </div>
-
     </form>
 
     <script>
         const params = new URLSearchParams(window.location.search);
 
+        const type = params.get("type");
         const name = params.get("name");
         const email = params.get("email");
+        const tel = params.get("tel");
         const message = params.get("message");
 
+        document.getElementById("confirm-type").textContent = type || "";
         document.getElementById("confirm-name").textContent = name || "";
         document.getElementById("confirm-email").textContent = email || "";
+        document.getElementById("confirm-tel").textContent = tel || "未入力";
         document.getElementById("confirm-message").textContent = message || "";
 
+        document.getElementById("hidden-type").value = type || "";
         document.getElementById("hidden-name").value = name || "";
         document.getElementById("hidden-email").value = email || "";
+        document.getElementById("hidden-tel").value = tel || "";
         document.getElementById("hidden-message").value = message || "";
     </script>
 
