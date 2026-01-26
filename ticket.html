@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チケット購入</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+       
+        .btn-custom {
+            color: orange;
+            border-radius: 20px;
+            border: 2px solid orange; 
+            width: 200px;
+            height: 50px;
+            background-color: transparent;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        
+        .btn-custom:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        
+        h4 {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+       
+        .steps p {
+            font-weight: bold;
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5 text-center">
+        
+        <h1>チケット料金</h1>
+        <img src="img/ticcket-price.png" class="img-fluid d-block mx-auto mb-4" alt="チケット料金表">
+        
+        <h4 class="mb-4">※小学生以下の方は保護者同伴で<br>のみご入場いただけます</h4>
+        
+        <hr class="my-5">
+        
+        <h1>チケット購入手順</h1>
+        
+        <div class="steps mb-5">
+            <p>1. 下記のボタンをクリックしてチケット<br>購入ページに飛んでください</p>
+            <p>2. 来場者様の情報を入力し、<br>購入する枚数を選択してください。</p>
+            <p>3. 枚数が確定したら購入ボタンをクリックし、<br>入力したメールアドレス宛に購入確認メールが届きましたら<br>購入完了となります。</p>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+            <button class="btn btn-custom">チケット購入ページ</button>
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
