@@ -224,6 +224,8 @@ body {
     flex-direction: column;
     justify-content: space-between; /* 名前を上、画像を下に配置 */
     min-width: 0; /* テキストのはみ出し防止 */
+    text-decoration: none;
+    color: #000;
 }
 
 .artist-name {
