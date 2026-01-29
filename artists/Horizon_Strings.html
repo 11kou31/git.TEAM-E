@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アーティストプロフィール</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+        }
+
+        .artist-img-box {
+            background-color: #d3d3d3;
+            border: 4px solid #40b3ff;
+            border-radius: 25px;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            /* はみ出し防止 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .artist-img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            /* 枠いっぱいに、比率維持でトリミング */
+            border-radius: 21px;
+            /* 枠に沿わせる（任意） */
+        }
+
+
+        .section-header {
+            font-weight: bold;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-4" style="max-width: 500px;">
+
+        <div class="mb-4">
+            <a href="index.html" class="text-decoration-none text-dark fw-bold d-inline-flex align-items-center">
+                <i class="bi bi-arrow-left me-2" style="font-size: 1.2rem; -webkit-text-stroke: 1px;"></i>
+                一覧に戻る
+            </a>
+        </div>
+
+        <div class="artist-img-box mb-4">
+            <img src="../img/HorizonStrings.webp" class="artist-img" alt="">
+        </div>
+
+        <div class="mb-4">
+            <h2 class="h5 fw-bold mb-1">■Horizon Strings</h2>
+            <p class="mb-0">ジャンル：クラシック/オーケストラ</p>
+            <p class="mb-0">形態：30人編成室内オーケストラ</p>
+        </div>
+
+        <section>
+            <div class="section-header">【プロフィール】</div>
+            <p>若手音楽家を中心に結成された室内オーケストラ。クラシックの名曲から、
+                映画音楽、アニメ音楽まで幅広いレパートリーで、クラシック音楽の魅力を伝える。
+                「地平線(Horizon)まで響く弦楽の音色」をコンセプトに、
+                野外での演奏にも積極的に取り組んでいる。今回のフェスでは、
+                春をテーマにしたクラシック曲とオリジナル曲を織り交ぜた特別プログラムを披露。
+                夕暮れ時の壮大な演奏で、フェスのフィナーレを飾る。
+            </p>
+        </section>
+
+        <section>
+            <div class="section-header">【出演情報】</div>
+            <p>出演日時：5月4日(日) 17:00-18:30<br>ステージ：MAIN STAGE</p>
+
+            <a href="timetable.html" class="btn btn-primary w-100 mt-2 fw-bold">
+                <i class="bi bi-calendar-event me-2"></i>タイムテーブルを見る
+            </a>
+        </section>
+
+        <section>
+            <div class="section-header">【代表曲】</div>
+            <ul class="fw-bold">
+                <li>Spring Symphony</li>
+                <li>四季より「春」(ヴィヴァルディ)</li>
+                <li>Horizon's Edge(オリジナル)</li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <div class="section-header">【sns】</div>
+            <div class="fw-bold">
+                <span class="me-2">[X: @horizon_strings]</span><br>
+                <span class="me-2">[Instagram:  @horizonstrings_orchestra]</span><br>
+                <span>[YouTube: Horizon Strings Orchestra]</span>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
