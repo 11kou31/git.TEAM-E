@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #222;
+  background-color: #FFF;
+  /* background: linear-gradient(
+    180deg,
+    #1ecad3 0%,  
+    #bfff00 55%,  
+    #ffa500 100%  */
+  /* ); */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.example {/*親div*/
+   font-family: "Gravitas One", serif;
+  position: relative;
+  }
+
+/* メインタイトル */
+.main-title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #fff;
+  font-size: 50px;
+  font-family: "Gravitas One", serif;
+  text-align: center;
+}
+
+/* サブタイトル */
+.sub-title {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.2em;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.event-info {
+  margin-top: 24px;
+  font-size: 1.6rem;        /* 全体を大きく */
+  font-weight: 700;        /* 太く */
+  line-height: 1.8;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* 日付をさらに強調したい場合 */
+.event-info br:first-of-type {
+  display: none; /* 不要なら消す */
+}
+
+/* 会場名だけデザイン変える */
+.event-info span {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 18px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  background: rgba(0,0,0,0.45);
+  border-radius: 999px;
+}
+
+
+.example img {
+  width: 100%;
+
+  }
+/* information
+------------------------------ */
+#information {
+  padding: 80px 0 100px;
+  color: #222;
+  text-align: center;
+}
+
+#information .wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+#information h1 {
+  display: inline-block;
+  margin: 0 auto 40px;
+  padding-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-bottom: 4px solid #222;
+}
+
+#information article {
+  margin-bottom: 40px;
+  padding: 40px 40px 35px;
+  text-align: left;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+#information article .text_date {
+  font-size: 0.85rem;
+}
+
+#information article h2 {
+  margin-bottom: 30px;
+  padding-bottom: 12px;
+  font-size: 1.15rem;
+  line-height: 1.8em;
+  border-bottom: 2px solid #d5c800;
+}
+
+#information article .text_content {
+  line-height: 2.0em;
+  font-size: 0.85rem;
+}
