@@ -1,0 +1,240 @@
+/* ==========================================================================
+   1. リセット & 基本設定 (共通)
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* ヘッダー */
+.site-header {
+    background-color: #ddd;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* メインコンテナ */
+.container {
+    max-width: 800px; /* ガイドページとして読みやすい幅 */
+    margin: 0 auto;
+    padding: 40px 15px;
+    min-height: 80vh;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   2. ガイドページ専用スタイル
+   ========================================================================== */
+.guide-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* アコーディオン全体 */
+.accordion-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+    border: 2px solid #FF7F50; /* フェスカラー（オレンジ） */
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* アコーディオンの見出しボタン */
+.accordion-header {
+    width: 100%;
+    padding: 18px 20px;
+    background: #fff;
+    color: #FF7F50;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.accordion-header::after {
+    content: '▼';
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+/* 開いている時の見出しスタイル */
+.accordion-header.is-open {
+    background-color: #FF7F50;
+    color: #fff;
+}
+
+.accordion-header.is-open::after {
+    transform: rotate(180deg);
+}
+
+/* アコーディオンの中身 */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background: #fffaf8;
+}
+
+.inner-content {
+    padding: 25px 20px;
+    border-top: 1px solid #FF7F50;
+}
+
+/* コンテンツ内の小見出し */
+.inner-content h3 {
+    font-size: 1.05rem;
+    color: #333;
+    border-left: 5px solid #00CCCB; /* シアン */
+    padding-left: 12px;
+    margin: 25px 0 12px;
+}
+
+.inner-content h3:first-child {
+    margin-top: 0;
+}
+
+.inner-content h4 {
+    font-size: 0.95rem;
+    margin: 15px 0 5px;
+    color: #FF7F50;
+}
+
+/* リストスタイル */
+.inner-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+.inner-content li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 6px;
+}
+
+.inner-content li::before {
+    content: "•";
+    color: #FF7F50;
+    font-weight: bold;
+    position: absolute;
+    left: 0.5em;
+}
+
+/* 補足・注意テキスト */
+.caution-text {
+    color: #d9534f;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #fdf2f2;
+    border-radius: 6px;
+}
+
+/* お問い合わせエリア */
+.contact-box {
+    margin-top: 15px;
+    padding: 20px;
+    background: #fff;
+    border: 1px dashed #00CCCB;
+    border-radius: 10px;
+}
+
+.contact-link {
+    display: inline-block;
+    background: #00CCCB;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.contact-link:hover {
+    opacity: 0.8;
+}
+
+/* ページ下部メッセージ */
+.guide-footer-msg {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px 20px;
+    border-top: 1px solid #eee;
+    color: #666;
+}
+
+/* ==========================================================================
+   3. フッター (共通)
+   ========================================================================== */
+.site-footer {
+    background-color: #00CCCB; /* フェスカラー（シアン） */
+    padding: 50px 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 40px 40px 0 0; /* デザインに合わせたアーチ */
+}
+
+/* ==========================================================================
+   4. レスポンシブ対応 (375px〜1280px以上)
+   ========================================================================== */
+
+/* タブレット (768px〜) */
+@media screen and (min-width: 768px) {
+    .page-title {
+        font-size: 2.8rem;
+    }
+    .accordion-header {
+        font-size: 1.25rem;
+        padding: 22px 30px;
+    }
+    .inner-content {
+        padding: 30px 40px;
+    }
+}
+
+/* PC (1280px〜) */
+@media screen and (min-width: 1280px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+/* スマホ小画面用微調整 */
+@media screen and (max-width: 375px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+    .accordion-header {
+        font-size: 1rem;
+        padding: 15px;
+    }
+}
