@@ -8,19 +8,13 @@
 }
 
 body {
-    font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+    font-family: 'Poppins', 'Noto Sans JP', sans-serif;
     color: #333;
     background-color: #fff;
     line-height: 1.6;
 }
 
-/* ヘッダー */
-.site-header {
-    background-color: #ddd;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-}
+
 
 /* メインコンテナ */
 .container {
@@ -192,16 +186,7 @@ body {
     color: #666;
 }
 
-/* ==========================================================================
-   3. フッター (共通)
-   ========================================================================== */
-.site-footer {
-    background-color: #00CCCB; /* フェスカラー（シアン） */
-    padding: 50px 20px;
-    color: #fff;
-    text-align: center;
-    border-radius: 40px 40px 0 0; /* デザインに合わせたアーチ */
-}
+
 
 /* ==========================================================================
    4. レスポンシブ対応 (375px〜1280px以上)
