@@ -79,6 +79,28 @@ html, body {
   border-radius: 999px;
 }
 
+.btn-outline {
+  background: transparent;
+  color: #FF7F50;
+  border: 2px solid #FF7F50;
+  padding: 12px 32px;
+  font-size: 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #FF7F50;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline:active {
+  transform: translateY(0);
+}
+
 
 .example img {
   width: 100%;
@@ -181,6 +203,18 @@ html, body {
     padding: 4px 12px;
     margin-top: 8px;
   }
+  .btn-outline {
+  background: transparent;
+  color: #FF7F50;
+  border: 2px solid #FF7F50;
+  padding: 12px 32px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
 }
 
 /* さらに小さい画面（iPhone SEなど 400px以下） */
