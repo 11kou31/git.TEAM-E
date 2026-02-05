@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アーティストプロフィール</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+        }
+
+        .artist-img-box {
+            background-color: #d3d3d3;
+            border: 4px solid #40b3ff;
+            border-radius: 25px;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            /* はみ出し防止 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .artist-img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            /* 枠いっぱいに、比率維持でトリミング */
+            border-radius: 21px;
+            /* 枠に沿わせる（任意） */
+        }
+
+
+        .section-header {
+            font-weight: bold;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-4" style="max-width: 500px;">
+
+        <div class="mb-4">
+            <a href="index.html" class="text-decoration-none text-dark fw-bold d-inline-flex align-items-center">
+                <i class="bi bi-arrow-left me-2" style="font-size: 1.2rem; -webkit-text-stroke: 1px;"></i>
+                一覧に戻る
+            </a>
+        </div>
+
+        <div class="artist-img-box mb-4">
+            <img src="../img/CrimsonWaves.webp" class="artist-img" alt="">
+        </div>
+
+        <div class="mb-4">
+            <h2 class="h5 fw-bold mb-1">■森下晴人</h2>
+            <p class="mb-0">ジャンル：エレクトロニカ/実験音楽
+            </p>
+            <p class="mb-0">形態：ソロアーティスト(エレクトロニカ/アンビエント)
+            </p>
+        </div>
+
+        <section>
+            <div class="section-header">【プロフィール】</div>
+            <p>シンセサイザーとフィールドレコーディングを組み合わせた独自のサウンドで、
+                幻想的な音世界を作り出すエレクトロニカアーティスト。
+                自然音と電子音を融合させた作品は、国内外の音楽メディアから高い評価を受ける。
+                ライブでは映像と音楽をシンクロさせた没入感のあるパフォーマンスを展開。
+
+            </p>
+        </section>
+
+        <section>
+            <div class="section-header">【出演情報】</div>
+            <p>出演日時：5月4日(日) 14:00-14:40
+                <br>ステージ：MAIN STAGE
+            </p>
+
+            <a href="timetable.html" class="btn btn-primary w-100 mt-2 fw-bold">
+                <i class="bi bi-calendar-event me-2"></i>タイムテーブルを見る
+            </a>
+        </section>
+
+        <section>
+            <div class="section-header">【代表曲】</div>
+            <ul class="fw-bold">
+                <li>森の記憶
+                </li>
+                <li>光の粒子
+                </li>
+                <li>Spring Ambient
+                </li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <div class="section-header">【sns】</div>
+            <div class="fw-bold">
+                <span class="me-2">[X: @morishita_haruto]</span><br>
+                <span class="me-2">[Instagram: @haruto_morishita]</span><br>
+                <span>[Bandcamp: Morishita Haruto]</span>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
