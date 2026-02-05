@@ -112,26 +112,34 @@
         </section>
 
     </div>
+        <footer class="site-footer">
+            <div class="footer-inner">
 
-    <div id="footer"></div>
+                <p class="footer-logo">Spring Festival Music 2026</p>
 
-    <script src="../js/common.js"></script>
+                <!-- フッターナビ -->
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">TOP</a></li>
+                        <li><a href="timetable.html">TIMETABLE</a></li>
+                        <li><a href="artists.html">ARTISTS</a></li>
+                        <li><a href="access.html">ACCESS</a></li>
+                        <li><a href="ticket.html">TICKET</a></li>
+                        <li><a href="goods.html">GOODS</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="guide.html">来場者ガイド</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    </ul>
+                </nav>
 
-    <script>
-        // ヘッダー読み込み（../ をつけて上の階層を見に行く）
-        fetch("../header.html")
-            .then((response) => response.text())
-            .then((data) => {
-                document.getElementById("header").innerHTML = data;
-            });
+                <!-- フッターロゴ -->
+                <div class="footer-brand">
+                    <p class="footer-copy">
+                        © 2026 Spring Festival Music. All Rights Reserved.
+                    </p>
+                </div>
 
-        // フッター読み込み（../ を忘れずにつける）
-        fetch("../footer.html")
-            .then((response) => response.text())
-            .then((data) => {
-                document.getElementById("footer").innerHTML = data;
-            });
-    </script>
 
 </body>
 

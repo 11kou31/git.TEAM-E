@@ -110,25 +110,7 @@
         </section>
 
     </div>
-    <div id="footer"></div>
 
-    <script src="../js/common.js"></script>
-
-    <script>
-        // ヘッダー読み込み（../ をつけて上の階層を見に行く）
-        fetch("../header.html")
-            .then((response) => response.text())
-            .then((data) => {
-                document.getElementById("header").innerHTML = data;
-            });
-
-        // フッター読み込み（../ を忘れずにつける）
-        fetch("../footer.html")
-            .then((response) => response.text())
-            .then((data) => {
-                document.getElementById("footer").innerHTML = data;
-            });
-    </script>
 </body>
 
 </html>
