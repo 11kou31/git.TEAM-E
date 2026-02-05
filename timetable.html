@@ -3,17 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TIME TABLE</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>タイムテーブル</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/timetable.css" />
   </head>
   <body>
-    <header class="site-header">ヘッダー</header>
+    <div id="header"></div>
 
     <main class="container">
       <h1 class="page-title">TIME TABLE</h1>
@@ -236,11 +233,28 @@
       </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="footer-content">footer</div>
-    </footer>
+    <div id="footer"></div>
+
+
+    <script src="js/common.js"></script>
 
     <script>
+            // ヘッダー読み込み
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
+
+      // フッター読み込み
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+
+
+
       document.addEventListener("DOMContentLoaded", () => {
         const tabs = document.querySelectorAll(".tab-btn");
         const timetables = document.querySelectorAll(".timetable");
@@ -262,6 +276,7 @@
           });
         });
       });
+
     </script>
   </body>
 </html>

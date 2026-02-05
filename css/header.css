@@ -38,6 +38,7 @@ body {
 }
 
 .global-nav a {
+  padding: 5px 5px;
   color: #fff;
   text-decoration: none;
   font-size: 14px;
@@ -78,4 +79,92 @@ body {
 
 .btn-flat-bottom-border:hover {
   background: #ff4400;
+}
+.hamburger {
+  display: none; /* PCでは隠す */
+  position: relative;
+  z-index: 100;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #222; /* ロゴの色に合わせる */
+  transition: all 0.4s;
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 11px; }
+.hamburger span:nth-child(3) { bottom: 0; }
+
+/* スマホ用レイアウト (960px以下) */
+@media screen and (max-width: 960px) {
+  .hamburger {
+    display: block; /* スマホで表示 */
+  }
+
+  .pc-only {
+    display: none;
+  }
+  /* 1. ナビゲーションの初期状態（隠れている状態） */
+  .global-nav {
+    position: fixed;
+    top: 0;
+    left: 100%; /* 右側の画面外に配置 */
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98); /* 背景をわずかに透過させた白 */
+    transition: all 0.5s ease;
+    z-index: 90; /* ハンバーガーボタン(1001)より下、メイン(0)より上 */
+    
+    /* 中の文字を中央に寄せる */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 2. ボタンを押したとき（is-activeがついたとき）に画面内に戻す */
+  .global-nav.is-active {
+    left: 0; /* 画面左端を0にすることで、画面全体を覆う */
+  }
+
+  /* 3. メニュー内のリンク縦並び設定 */
+  .nav-links {
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    gap: 25px;              /* メニュー間の余白 */
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;      /* スマホで見やすいよう大きく */
+    color: #222;            /* 文字色を黒にする（重要！） */
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  /* スマホ専用のチケットボタン（枠線をつけるなど） */
+  .sp-ticket-btn {
+    margin-top: 10px;
+    padding: 10px 30px;
+    background-color: #ffa500; /* 目立つ色に */
+    color: #fff !important;    /* 文字は白 */
+    border-radius: 5px;
+  }
+  .logo a {
+    font-size: 14px;      /* PCより一回り小さく設定 */
+    margin: 0;
+    max-width: 75%;         /* ボタンを圧迫しないよう幅を制限 */
+    white-space: nowrap;    /* 可能なら一行で表示 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* もし入り切らない場合は「...」にする設定 */
+  }
 }

@@ -6,17 +6,9 @@
 }
 
 body {
-    font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+    font-family: 'Poppins', 'Noto Sans JP', sans-serif;
     color: #333;
     background-color: #fff;
-}
-
-/* ヘッダー */
-.site-header {
-    background-color: #ddd;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
 }
 
 /* メインコンテナ */
@@ -281,15 +273,7 @@ body {
     }
 }
 
-/* フッター */
-.site-footer {
-    background-color: #00CCCB;
-    padding: 40px 20px;
-    margin-top: 50px;
-    border-radius: 50% 50% 0 0 / 20px 20px 0 0; /* 上部をアーチ状に */
-    color: #fff;
-    text-align: center;
-}
+
 
 /* レスポンシブ調整 */
 @media screen and (max-width: 374px) {

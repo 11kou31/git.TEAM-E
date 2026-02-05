@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Poppins','Noto Sans JP', sans-serif;
   color: #222;
   background-color: #FFF;
   /* background: linear-gradient(
@@ -79,6 +79,28 @@ html, body {
   border-radius: 999px;
 }
 
+.btn-outline {
+  background: transparent;
+  color: #FF7F50;
+  border: 2px solid #FF7F50;
+  padding: 12px 32px;
+  font-size: 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #FF7F50;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline:active {
+  transform: translateY(0);
+}
+
 
 .example img {
   width: 100%;
@@ -130,4 +152,74 @@ html, body {
 #information article .text_content {
   line-height: 2.0em;
   font-size: 0.85rem;
+}
+
+/* メインビジュアルの文字サイズ調整 */
+@media screen and (max-width: 768px) {
+  /* 親要素の高さが画像に依存するように調整 */
+  .example {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* メインタイトル：中央に配置し、サイズを最適化 */
+  .main-title {
+    font-size: 26px;    /* 32pxよりさらに少し小さくして一行に収めやすく */
+    top: 30%;           /* 少し上にずらす */
+    width: 90%;
+    line-height: 1.2;
+  }
+
+  /* サブタイトル：タイトルのすぐ下に配置 */
+  .sub-title {
+    font-size: 13px;
+    top: 50%;           /* タイトルとの距離を詰める */
+    width: 90%;
+    letter-spacing: 0.1em;
+  }
+
+  /* イベント情報：スマホでは画像の下に配置するか、重なる場合は位置を調整 */
+  .event-info {
+    position: absolute; /* 画像に重ねる場合 */
+    top: 55%;           /* 重なり位置を調整 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    font-size: 0.95rem; /* 文字を小さく */
+    margin-top: 0;
+    line-height: 1.5;
+  }
+
+  /* 日付の改行を有効にする（brを復活） */
+  .event-info br {
+    display: block;
+  }
+
+  /* 会場名ラベルを小さく */
+  .event-info span {
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    margin-top: 8px;
+  }
+  .btn-outline {
+  background: transparent;
+  color: #FF7F50;
+  border: 2px solid #FF7F50;
+  padding: 12px 32px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+}
+
+/* さらに小さい画面（iPhone SEなど 400px以下） */
+@media screen and (max-width: 400px) {
+  .main-title { font-size: 22px; }
+  .sub-title { font-size: 11px; }
+  .event-info { font-size: 0.85rem; top: 58%; }
 }

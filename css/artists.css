@@ -50,3 +50,107 @@
   color: #666;
   line-height: 1.6;
 }
+
+/* ページ全体の余白 */
+#artists-page {
+  padding: 60px 0 100px;
+  background-color: #f9f9f9; /* 軽くグレーにしてカードを際立たせる */
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ページタイトル (ARTISTS) */
+.page-title {
+  font-family: "Gravitas One", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: 0.1em;
+}
+
+/* 日付の見出し */
+.day-heading {
+  font-size: 1.5rem;
+  border-left: 8px solid #ffa500; /* オレンジのアクセント線 */
+  padding: 5px 15px;
+  margin: 40px 0 30px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* アーティストカードの親要素 */
+.artist-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* PCは3列 */
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+/* アーティストカード単体 */
+.artist-card {
+  display: block;
+  text-decoration: none;
+  color: #222;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.artist-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.artist-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 正方形に統一 */
+  object-fit: cover;
+  filter: grayscale(20%); /* 少し彩度を落としてオシャレに */
+  transition: filter 0.3s;
+}
+
+.artist-card:hover img {
+  filter: grayscale(0%);
+}
+
+.artist-card h3 {
+  font-size: 1.15rem;
+  margin: 15px 15px 5px;
+  font-weight: 700;
+}
+
+.artist-card p {
+  font-size: 0.85rem;
+  margin: 0 15px 20px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* スマホ・タブレット対応 */
+@media screen and (max-width: 960px) {
+  .artist-wrapper {
+    grid-template-columns: repeat(2, 1fr); /* タブレット・スマホは2列 */
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .artist-wrapper {
+    grid-template-columns: 1fr; /* 小さいスマホは1列 */
+  }
+  
+  .day-heading {
+    font-size: 1.25rem;
+  }
+}
