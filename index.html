@@ -37,7 +37,7 @@
       <h1>お知らせ</h1>
 
       <article id="part1">
-        <p class="text_date"><time datetime="2021-04-12">2021.04.12</time></p>
+        <p class="text_date"><time datetime="2021-04-12">2026.01.12</time></p>
         <h2>お問い合わせページを追加しました。</h2>
         <p class="text_content">
           お問い合わせページを追加しました。<br>
@@ -46,13 +46,13 @@
       </article>
 
       <article id="part2">
-        <p class="text_date"><time datetime="2021-04-05">2021.04.05</time></p>
+        <p class="text_date"><time datetime="2021-04-05">2026.01.05</time></p>
         <h2>プロフィールを更新しました。</h2>
         <p class="text_content">プロフィールを更新しました。</p>
       </article>
 
       <article id="part3">
-        <p class="text_date"><time datetime="2021-04-01">2021.04.01</time></p>
+        <p class="text_date"><time datetime="2021-04-01">2026.01.01</time></p>
         <h2>PROFILEサイトを公開しました！</h2>
         <p class="text_content">
           サイトを公開しました。<br>
@@ -60,21 +60,38 @@
         </p>
       </article>
     </div>
+
+    <button class="btn-outline" onclick="location.href='guide.html'">ガイドページはこちらから</button>
   </main>
 
   <!-- ▼ フッター挿入位置 -->
   <div id="footer"></div>
 
   <!-- ▼ JS（必ず body の最後） -->
-  <script src="js/common.js">
+  <script src="js/common.js"></script>
 
-    // ヘッダー読み込み
+  <script>
+// ヘッダー読み込み
 fetch('header.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('header').innerHTML = data;
+    // ヘッダー挿入「後」に実行
+    initHamburger();
   });
 
+// ハンバーガーメニューの制御関数
+function initHamburger() {
+  const btn = document.getElementById('js-hamburger');
+  const nav = document.getElementById('js-nav');
+
+  if (btn && nav) {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('is-active');
+      nav.classList.toggle('is-active');
+    });
+  }
+}
 // フッター読み込み
 fetch('footer.html')
   .then(response => response.text())
