@@ -5,110 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>よくある質問</title>
-    <link rel="stylesheet" href="css/footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/faq.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Noto+Sans+JP:wght@100..900&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Poppins:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
-<style>
-    .img {
-        width: 200px;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-    }
 
-    .mar {
-        margin: 100px auto 100px;
-    }
-
-    .title {
-        text-align: center;
-    }
-
-    .title2 {
-        border-bottom: #FF8C00 solid 2px;
-        max-width: 300px;
-        margin: 20px auto 40px;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    h2 {
-        text-align: center;
-    }
-
-    :root {
-        --brand-orange: #ff8c00;
-    }
-
-    .qa-outer-border {
-        border: 4px solid var(--brand-blue) !important;
-    }
-
-    .qa-block {
-        border: 1px solid var(--brand-orange) !important;
-    }
-
-    .qa-icon {
-        background-color: var(--brand-orange);
-        color: white;
-        width: 32px;
-        height: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        flex-shrink: 0;
-    }
-
-    .btn-ask {
-        background-color: var(--brand-orange);
-        color: white;
-        border: none;
-        padding: 5px 30px;
-    }
-
-    .btn-ask:hover {
-        background-color: #e67e00;
-        color: white;
-    }
-</style>
 
 <body>
-    <header class="site-header">
-        <div class="header-inner">
-
-            <!-- ロゴ / サイト名 -->
-            <h1 class="logo">
-                <a href="index.html">Spring Festival Music 2026</a>
-            </h1>
-
-            <!-- グローバルナビ -->
-            <nav class="global-nav">
-                <a href="index.html">TOP</a>
-                <a href="timetable.html">TIMETABLE</a>
-                <a href="artists.html">ARTISTS</a>
-                <a href="access.html">ACCESS</a>
-                <a href="goods.html">GOODS</a>
-                <a href="faq.html">FAQ</a>
-            </nav>
-
-            <!-- チケット購入ボタン -->
-            <a href="ticket.html" class="btn-flat-bottom-border">
-                <span>TICKET購入はこちらから</span>
-            </a>
-
-        </div>
-    </header>
+    <div id="header"></div>
     <h1>Q&A</h1>
     <div class="title2">
         <h1>よくある質問</h1>
@@ -263,37 +173,10 @@
                 </div>
             </div>
         </div>
-        <footer class="site-footer">
-            <div class="footer-inner">
+        <div id="footer"></div>
 
-                <p class="footer-logo">Spring Festival Music 2026</p>
-
-                <!-- フッターナビ -->
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="index.html">TOP</a></li>
-                        <li><a href="timetable.html">TIMETABLE</a></li>
-                        <li><a href="artists.html">ARTISTS</a></li>
-                        <li><a href="access.html">ACCESS</a></li>
-                        <li><a href="ticket.html">TICKET</a></li>
-                        <li><a href="goods.html">GOODS</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="guide.html">来場者ガイド</a></li>
-                        <li><a href="contact.html">お問い合わせ</a></li>
-                        <li><a href="privacy.html">プライバシーポリシー</a></li>
-                    </ul>
-                </nav>
-
-                <!-- フッターロゴ -->
-                <div class="footer-brand">
-                    <p class="footer-copy">
-                        © 2026 Spring Festival Music. All Rights Reserved.
-                    </p>
-                </div>
-
-            </div>
-        </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/common.js"></script>
 </body>
 
 </html>
