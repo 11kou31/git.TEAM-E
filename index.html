@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>トップページ</title>
-
-  <link rel="stylesheet" href="css/index.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Poppins:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"></head>
 
 <body>
 
@@ -63,45 +65,10 @@
 
     <button class="btn-outline" onclick="location.href='guide.html'">ガイドページはこちらから</button>
   </main>
-
-  <!-- ▼ フッター挿入位置 -->
+  
   <div id="footer"></div>
 
-  <!-- ▼ JS（必ず body の最後） -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/common.js"></script>
-
-  <script>
-// ヘッダー読み込み
-fetch('header.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('header').innerHTML = data;
-    // ヘッダー挿入「後」に実行
-    initHamburger();
-  });
-
-// ハンバーガーメニューの制御関数
-function initHamburger() {
-  const btn = document.getElementById('js-hamburger');
-  const nav = document.getElementById('js-nav');
-
-  if (btn && nav) {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('is-active');
-      nav.classList.toggle('is-active');
-    });
-  }
-}
-// フッター読み込み
-fetch('footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('footer').innerHTML = data;
-  });
-
-  </script>
-
-
-
 </body>
 </html>

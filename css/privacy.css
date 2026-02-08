@@ -1,0 +1,37 @@
+body {
+  font-family: "Poppins", "Noto Sans JP", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.policy-container {
+  max-width: 800px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e9ecef;
+  color: #000;
+  font-weight: bold;
+}
+
+.accordion-button {
+  font-weight: 600;
+}
+
+.accordion-body {
+  background-color: #fff;
+  white-space: pre-wrap; /* 改行を維持 */
+}
+
+/* スマホ用調整 */
+@media (max-width: 576px) {
+  .policy-container {
+    padding: 0 15px;
+  }
+  .display-6 {
+    font-size: 1.5rem;
+  }
+}
