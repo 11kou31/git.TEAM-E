@@ -1,0 +1,50 @@
+.site-header {
+  background-color: #FF7F50 !important;
+  padding: 10px 0;
+}
+
+.logo {
+  font-family: 'Gravitas One', serif;
+  font-size: 1.2rem !important;
+  color: #fff !important;
+}
+
+.nav-links a {
+  font-family: 'Poppins', sans-serif;
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  margin-right: 0;
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.navbar-toggler {
+  border: none; 
+  padding-right: 0; 
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1); 
+}
+
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: #FF7F50;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+  }
+}
+

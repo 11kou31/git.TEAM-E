@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Poppins','Noto Sans JP', sans-serif;
+  color: #222;
+  background-color: #FFF;
+  /* background: linear-gradient(
+    180deg,
+    #1ecad3 0%,  
+    #bfff00 55%,  
+    #ffa500 100%  */
+  /* ); */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.example {/*親div*/
+   font-family: "Gravitas One", serif;
+  position: relative;
+  }
+
+/* メインタイトル */
+.main-title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #fff;
+  font-size: 50px;
+  font-family: "Gravitas One", serif;
+  text-align: center;
+}
+
+/* サブタイトル */
+.sub-title {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.2em;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.event-info {
+  margin-top: 24px;
+  font-size: 1.6rem;        /* 全体を大きく */
+  font-weight: 700;        /* 太く */
+  line-height: 1.8;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* 日付をさらに強調したい場合 */
+.event-info br:first-of-type {
+  display: none; /* 不要なら消す */
+}
+
+/* 会場名だけデザイン変える */
+.event-info span {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 18px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  background: rgba(0,0,0,0.45);
+  border-radius: 999px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #FF7F50;
+  border: 2px solid #FF7F50;
+  padding: 12px 32px;
+  font-size: 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #FF7F50;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline:active {
+  transform: translateY(0);
+}
+
+
+.example img {
+  width: 100%;
+
+  }
+/* information
+------------------------------ */
+#information {
+  padding: 80px 0 100px;
+  color: #222;
+  text-align: center;
+}
+
+#information .wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+#information h1 {
+  display: inline-block;
+  margin: 0 auto 40px;
+  padding-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-bottom: 4px solid #222;
+}
+
+#information article {
+  margin-bottom: 40px;
+  padding: 40px 40px 35px;
+  text-align: left;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+#information article .text_date {
+  font-size: 0.85rem;
+}
+
+#information article h2 {
+  margin-bottom: 30px;
+  padding-bottom: 12px;
+  font-size: 1.15rem;
+  line-height: 1.8em;
+  border-bottom: 2px solid #d5c800;
+}
+
+#information article .text_content {
+  line-height: 2.0em;
+  font-size: 0.85rem;
+}
+
+/* メインビジュアルの文字サイズ調整 */
+@media screen and (max-width: 768px) {
+  /* 親要素の高さが画像に依存するように調整 */
+  .example {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* メインタイトル：中央に配置し、サイズを最適化 */
+  .main-title {
+    font-size: 26px;    /* 32pxよりさらに少し小さくして一行に収めやすく */
+    top: 30%;           /* 少し上にずらす */
+    width: 90%;
+    line-height: 1.2;
+  }
+
+  /* サブタイトル：タイトルのすぐ下に配置 */
+  .sub-title {
+    font-size: 13px;
+    top: 50%;           /* タイトルとの距離を詰める */
+    width: 90%;
+    letter-spacing: 0.1em;
+  }
+
+  /* イベント情報：スマホでは画像の下に配置するか、重なる場合は位置を調整 */
+  .event-info {
+    position: absolute; /* 画像に重ねる場合 */
+    top: 55%;           /* 重なり位置を調整 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    font-size: 0.95rem; /* 文字を小さく */
+    margin-top: 0;
+    line-height: 1.5;
+  }
+
+  /* 日付の改行を有効にする（brを復活） */
+  .event-info br {
+    display: block;
+  }
+
+  /* 会場名ラベルを小さく */
+  .event-info span {
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    margin-top: 8px;
+  }
+  .btn-outline {
+  background: transparent;
+  color: #FF7F50;
+  border: 2px solid #FF7F50;
+  padding: 12px 32px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+}
+
+/* さらに小さい画面（iPhone SEなど 400px以下） */
+@media screen and (max-width: 400px) {
+  .main-title { font-size: 22px; }
+  .sub-title { font-size: 11px; }
+  .event-info { font-size: 0.85rem; top: 58%; }
+}

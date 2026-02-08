@@ -1,0 +1,291 @@
+/* リセットと基本設定 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* メインコンテナ */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    min-height: 80vh;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+}
+
+/* 日付タブボタン */
+.date-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    border: 1px solid #FF7F50;
+    border-radius: 8px;
+    padding: 5px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: #fff;
+    color: #FF7F50;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    background: #FF7F50;
+    color: #fff;
+}
+
+.separator {
+    border-top: 1px solid #999;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* タイムテーブル (CSS Grid) */
+.timetable {
+    display: none; /* JSで切り替え */
+    /* グリッド定義: 時間列 + Main + Sub */
+    grid-template-columns: 50px 1fr 1fr;
+    /* 1行を10分とする (高さ25px) */
+    grid-auto-rows: 25px;
+    border: 1px solid #000;
+    position: relative;
+    padding-top: 30px; /* カラムヘッダー分 */
+}
+
+.timetable.active {
+    display: grid;
+}
+
+/* カラムヘッダー */
+.col-head {
+    position: absolute;
+    top: 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 50%;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.col-head.main-stage {
+    left: 0;
+    grid-column: 2;
+}
+
+.col-head.sub-stage {
+    margin-left: 5rem;
+    grid-column: 3;
+}
+
+
+.timetable {
+    /* グリッドラインに名前をつける */
+    grid-template-rows: 
+        [time-1100] repeat(6, 25px) 
+        [time-1200] repeat(6, 25px)
+        [time-1300] repeat(6, 25px)
+        [time-1400] repeat(6, 25px)
+        [time-1500] repeat(6, 25px)
+        [time-1600] repeat(6, 25px)
+        [time-1700] repeat(6, 25px)
+        [time-1800] repeat(6, 25px)
+        [time-1900];
+}
+
+/* 時間ラベル */
+.time-label {
+    grid-column: 1;
+    font-size: 0.85rem;
+    text-align: right;
+    padding-right: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    line-height: 1;
+    position: relative;
+    top: -0.5em; /* 線に合わせる */
+}
+
+.time-label.t-1100 { grid-row: time-1100; }
+.time-label.t-1200 { grid-row: time-1200; }
+.time-label.t-1300 { grid-row: time-1300; }
+.time-label.t-1400 { grid-row: time-1400; }
+.time-label.t-1500 { grid-row: time-1500; }
+.time-label.t-1600 { grid-row: time-1600; }
+.time-label.t-1700 { grid-row: time-1700; }
+.time-label.t-1800 { grid-row: time-1800; }
+.time-label.t-1900 { grid-row: time-1900; }
+
+.arrow {
+    font-size: 0.6em;
+    color: #bfa16d; /* 金色っぽい茶色 */
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+/* グリッドライン（横線） */
+.grid-line {
+    grid-column: 2 / 4; /* MainからSubまで */
+    border-top: 1px solid #000;
+}
+
+.grid-line.dashed {
+    border-top: 1px dashed #000;
+}
+
+.grid-line.l-1100 { grid-row: time-1100; }
+.grid-line.l-1200 { grid-row: time-1200; }
+.grid-line.l-1300 { grid-row: time-1300; }
+.grid-line.l-1400 { grid-row: time-1400; }
+.grid-line.l-1500 { grid-row: time-1500; }
+.grid-line.l-1600 { grid-row: time-1600; }
+.grid-line.l-1700 { grid-row: time-1700; }
+.grid-line.l-1800 { grid-row: time-1800; } /* 19:00の線は不要なら削除 */
+
+/* 中央の縦線 */
+.timetable::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    left: calc(50px + (100% - 50px) / 2); /* gridの真ん中 */
+    border-left: 1px solid #000;
+    pointer-events: none;
+}
+
+/* イベントカード共通 */
+.event-card {
+    margin: 1px;
+    padding: 5px;
+    display: flex;
+    font-size: 0.8rem;
+    overflow: hidden;
+}
+
+/* Main Stage スタイル */
+.event-card.main {
+    grid-column: 2;
+    border-left: 5px solid #FF7F50;
+    border-bottom: 1px solid #FF7F50;
+}
+
+/* Sub Stage スタイル */
+.event-card.sub {
+    grid-column: 3;
+    border-left: 5px solid #66FF66;
+    border-bottom: 1px solid #66FF66;
+}
+
+/* カードの中身 */
+.time-box {
+    width: 35px;
+    font-size: 0.7em;
+    color: #fff;
+    flex-shrink: 0;
+    padding: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+.main .time-box { background-color: #FF7F50; }
+.sub .time-box { background-color: #66FF66; }
+
+/* --- 画像とカード内のレイアウト修正 --- */
+
+.content-box {
+    flex-grow: 1;
+    padding-left: 8px; /* 余白を少し広めに */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 名前を上、画像を下に配置 */
+    min-width: 0; /* テキストのはみ出し防止 */
+    text-decoration: none;
+    color: #000;
+}
+
+.artist-name {
+    font-weight: bold;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    margin-bottom: 4px;
+    word-break: break-all; /* 長い名前の改行対応 */
+}
+
+.artist-img {
+    width: 100%;          /* 親要素の幅いっぱいに広げる */
+    max-width: 120px;     /* 小さなカードでは最大幅を制限 */
+    height: auto;
+    aspect-ratio: 3 / 2;  /* 画像の比率を3:2に固定（ここはお好みで） */
+    object-fit: cover;    /* 枠に合わせてトリミング（伸び防止） */
+    object-position: center; /* 中央を中心に表示 */
+    align-self: flex-end; /* 右下に寄せる */
+    border-radius: 4px;   /* 少し角を丸くするとデザインが馴染みます */
+    background-color: #eee;
+}
+
+/* スペシャルライブ（DAY1）やフィナーレ（DAY2）などの大きいカード用 */
+.large-content {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.large-content .artist-name {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.artist-img.large {
+    max-width: 100%;      /* 横幅いっぱい */
+    aspect-ratio: 16 / 9; /* 横長に設定 */
+    height: auto;
+}
+
+/* スマホ用の微調整 (375px〜) */
+@media screen and (max-width: 480px) {
+    .artist-img {
+        max-width: 80px;  /* スマホでは画像を少し小さくして文字スペースを確保 */
+    }
+    .artist-name {
+        font-size: 0.75rem;
+    }
+    .time-box {
+        font-size: 0.6rem;
+        width: 30px;
+    }
+}
+
+
+
+/* レスポンシブ調整 */
+@media screen and (max-width: 374px) {
+    /* 非常に小さい画面用 */
+    .timetable {
+        grid-template-columns: 35px 1fr 1fr;
+    }
+    .time-label {
+        font-size: 0.7rem;
+    }
+    .artist-img {
+        width: 50px;
+        height: 35px;
+    }
+}

@@ -1,0 +1,51 @@
+.site-footer {
+  width: 100vw;
+  margin-left: calc(50% - 50vw); /* 横の余白対策 */
+  background: #00CCCB;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ナビゲーションのリスト全体の設定 */
+.footer-nav ul {
+  display: flex;            /* これで横並びになります */
+  justify-content: center;  /* 中央寄せ（左寄せなら flex-start） */
+  flex-wrap: wrap;          /* 画面幅が狭い時に折り返して表示させる */
+  list-style: none;         /* リストの「・」マークを消す */
+  padding: 0;               /* デフォルトの余白をリセット */
+  margin: 0;
+  gap: 20px;                /* 各項目の間の余白 (古いブラウザ対応が必要なら li に margin) */
+}
+
+/* リンク自体の見た目調整（お好みで） */
+.footer-nav a {
+  text-decoration: none;    /* 下線を消す */
+  display: block; 
+    color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;          /* クリック領域を確保 */
+}
+
+/* ナビゲーション */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.footer-nav a:hover {
+  opacity: 0.8;
+}
+
+/* コピーライト */
+.footer-copy {
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}

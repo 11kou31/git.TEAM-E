@@ -1,0 +1,35 @@
+body {
+  background-color: #fff;
+  font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+  padding-top: 0;
+}
+
+.form-container {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.btn-custom-red {
+  background-color: #fc4d4d;
+  border-color: #fc4d4d;
+  color: white;
+  font-size: 1.05rem;
+}
+
+.btn-custom-red:hover {
+  background-color: #e03c3c;
+  border-color: #e03c3c;
+  color: white;
+}
+
+.form-control,
+.form-select {
+  border-radius: 0;
+  border-color: #666;
+}
+
+.required {
+  color: #e60000;
+  font-size: 0.85rem;
+  margin-left: 4px;
+}
